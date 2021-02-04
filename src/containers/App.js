@@ -126,7 +126,7 @@ function App() {
         : "Empty"
       : "ERR";
     SetReport(
-      "The place Is(" + place[0] + ", " + place[1] + ", " + isFull + ")"
+      "The Well Is " + place[0] + ", " + place[1] + ", " + isFull + ")"
     );
   };
   const OnDetectClicked = () => {
@@ -272,18 +272,19 @@ function App() {
           <WellList place={place} fullWells={fullWells} isInPlate={isInPlate} />
         </div>
         <div className="dib">
-          <button
+        {(initialiseX && initialiseY) && (
+        <button
             className="ma2 f6 link dim ph3 pv2 mb2 dib white bg-dark-green"
             onClick={() => OnReportClicked()}
           >
             REPORT
-          </button>
-          <button
+          </button>)}
+          {(initialiseX && initialiseY) && (<button
             className="ma2 f6 link dim ph3 pv2 mb2 dib white bg-dark-green"
             onClick={() => OnDetectClicked()}
           >
             DETECT
-          </button>
+          </button>)}
           <ReportPalette reportText={report} />
           <div>
             <span className="pa2 db green">
