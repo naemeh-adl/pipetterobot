@@ -304,7 +304,7 @@ function App() {
               >
                 {numOfClicks === 0
                   ? "PRESS TO EXECUTE FIRST LINE OF FILE"
-                  : "PRESS TO EXECUTE NEXT LINE OF FILE"}
+                  : (numOfClicks===contntF.length?"END OF FILE":"PRESS TO EXECUTE NEXT LINE OF FILE")}
               </button>
             </div>
             <span className="pa4 db dark-red">{fileErrors}</span>
