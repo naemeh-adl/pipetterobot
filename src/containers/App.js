@@ -126,7 +126,7 @@ function App() {
         : "Empty"
       : "ERR";
     SetReport(
-      "The Well Is " + place[0] + ", " + place[1] + ", " + isFull + ")"
+      "The Well Is (" + place[0] + ", " + place[1] + ", " + isFull + ")"
     );
   };
   const OnDetectClicked = () => {
