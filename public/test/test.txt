@@ -1,6 +1,43 @@
+a)
+
 PLACE 1,1
-PLACE 1,4
-PLACE 5,1
+
 MOVE N
+DROP
 
 REPORT
+
+Output: 2,1,EMPTY
+
+ 
+
+b)
+
+PLACE 1,1
+
+MOVE E
+
+MOVE W
+
+MOVE N
+
+DROP
+
+
+REPORT
+
+Output: 1,2,FULL
+
+ 
+
+c)
+
+PLACE 1,2
+
+MOVE N
+
+MOVE E
+
+REPORT
+
+Output: 2,3,EMPTY
