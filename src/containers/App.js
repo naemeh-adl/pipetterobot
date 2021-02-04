@@ -207,9 +207,6 @@ function App() {
     SetnumOfClicks(k + 1);
   };
   const FileErrorHndler = (Etext) => {
-    //Handle File Errors!
-    // let ER = fileErrors;
-    // ER += Etext;
     SetFileError(Etext);
   };
   ////////////////////////RETURN//////////////////////////////////
@@ -290,7 +287,7 @@ function App() {
           <ReportPalette reportText={report} />
           <div>
             <span className="pa2 db green">
-              Choose A File To Execte Commands!
+              Choose A File To Execute Commands!
             </span>
             <input
               className="white ba"
@@ -305,7 +302,9 @@ function App() {
                 className="ma2 f6 link dim ph3 pv2 mb2 dib white bg-dark-green"
                 onClick={() => OnFileExecClicked()}
               >
-                EXECUTE LINE BY LINE
+                {numOfClicks === 0
+                  ? "PRESS TO EXECUTE FIRST LINE OF FILE"
+                  : "PRESS TO EXECUTE NEXT LINE OF FILE"}
               </button>
             </div>
             <span className="pa4 db dark-red">{fileErrors}</span>
